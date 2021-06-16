@@ -11,6 +11,16 @@
     tools:context=".second.SecondActivity">
 
     <TextView
+        android:id="@+id/userName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:text="Başarılar :)"/>
+
+    <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

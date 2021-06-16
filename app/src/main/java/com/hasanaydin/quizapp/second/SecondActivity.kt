@@ -2,6 +2,7 @@ package com.hasanaydin.quizapp.second
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.AlarmClock.EXTRA_MESSAGE
 import androidx.lifecycle.ViewModelProvider
 import com.hasanaydin.quizapp.R
 import com.hasanaydin.quizapp.databinding.ActivityMainBinding
@@ -22,5 +23,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(view)
         viewModel = ViewModelProvider(this).get(SecondViewModel::class.java)
 
+        var uname = intent.getStringExtra(EXTRA_MESSAGE)
+        binding.userName2.text = "Başarılar, $uname :)"
     }
 }
