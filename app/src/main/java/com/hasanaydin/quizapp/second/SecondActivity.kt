@@ -1,11 +1,13 @@
 package com.hasanaydin.quizapp.second
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import androidx.lifecycle.ViewModelProvider
 import com.hasanaydin.quizapp.QuestionsData
 import com.hasanaydin.quizapp.R
+import com.hasanaydin.quizapp.ResultActivity
 import com.hasanaydin.quizapp.databinding.ActivityMainBinding
 import com.hasanaydin.quizapp.databinding.ActivitySecondBinding
 import com.hasanaydin.quizapp.main.MainViewModel
@@ -33,5 +35,38 @@ class SecondActivity : AppCompatActivity() {
         binding.answer2.text = question1.answer2
         binding.answer3.text = question1.answer3
         binding.answer4.text = question1.answer4
+
+        binding.answer1.setOnClickListener {
+            var message = "Üzgünüz, Yanlış cevap :("
+            var intent = Intent(this,ResultActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE,message)
+            }
+            startActivity(intent)
+
+        }
+
+        binding.answer2.setOnClickListener {
+            var message = "Üzgünüz, Yanlış cevap :("
+            var intent = Intent(this,ResultActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE,message)
+            }
+            startActivity(intent)
+        }
+
+        binding.answer3.setOnClickListener {
+            var message = "Tebrikler, Doğru Cevap"
+            var intent = Intent(this,ResultActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE,message)
+            }
+            startActivity(intent)
+        }
+
+        binding.answer4.setOnClickListener {
+            var message = "Üzgünüz, Yanlış cevap :("
+            var intent = Intent(this,ResultActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE,message)
+            }
+            startActivity(intent)
+        }
     }
 }
