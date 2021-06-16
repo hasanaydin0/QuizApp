@@ -1,12 +1,12 @@
-package com.hasanaydin.quizapp
+package com.hasanaydin.quizapp.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import com.hasanaydin.quizapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
     lateinit var viewModel: MainViewModel
 

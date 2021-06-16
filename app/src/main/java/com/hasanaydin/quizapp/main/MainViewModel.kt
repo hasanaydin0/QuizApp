@@ -1,4 +1,4 @@
-package com.hasanaydin.quizapp
+package com.hasanaydin.quizapp.main
 
 import androidx.lifecycle.ViewModel
 
